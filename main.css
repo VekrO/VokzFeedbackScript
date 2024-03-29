@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.vokz-iframe-container {
+    width: 100%;
+    height: 300px;
+    display: block;
+    opacity: 1;
+    border-radius: 18px;
+    position: fixed;
+    border: 0px solid rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    z-index: 99999;
+    user-select: none;
+    animation: animation 1s normal;
+    transition: 0.3s;
+}
+
+.vokz-iframe-container .vokz-iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.vokz-iframe-container.show {
+    bottom: 0;
+    animation: animation 1s forwards;
+}
+
+.vokz-iframe-close-button {
+    border-radius: 50%;
+    background: none;
+    border: 0;
+    font-size: 32px;
+    position: absolute;
+    right: 22px;
+    top: -17px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes animation {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0%);
+    }
+}
